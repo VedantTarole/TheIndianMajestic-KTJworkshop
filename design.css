@@ -1,0 +1,319 @@
+body{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background: linear-gradient(#00adb5,#aad8d3);
+    font-family: 'KoHo', sans-serif;
+    
+    
+}
+html
+{
+    scroll-behavior: smooth;
+}
+nav
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #393e46;
+    z-index: 50;
+    opacity: 10;
+    
+
+}
+nav .logo
+{
+    font-family: 'Niramit', sans-serif;
+    font-weight: 700;
+    font-size: 1.65rem;
+    padding: 0 5px;
+    text-transform:capitalize;
+    color:aliceblue;
+    
+        
+    
+}
+nav ul
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    align-items: center;
+    width:60%;
+    padding: 0 5px;
+}
+nav ul li
+{
+    list-style: none;
+    
+}
+nav ul li a
+{
+    text-decoration: none;
+    color:aliceblue;
+    border-radius: 5px;
+}
+nav ul li a:hover,
+nav ul li a:active 
+{
+    background: aliceblue;
+    color: #393e46;
+}
+.main
+{
+    margin-top: 35px;
+}
+.intro
+{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-around;
+}
+.intro .cover 
+{
+ 
+    width:60%;
+    height: 100%;
+    border-right: 5px solid gray;
+
+
+
+ 
+}
+.intro .name span h1
+{
+     background: 50% 100% / 50% 50% no-repeat
+radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+font-size: 7em;
+font-family: "Source Sans Pro", sans-serif;
+animation: reveal 3000ms ease-in-out forwards 200ms,
+   glow 2500ms linear infinite 2000ms;
+   margin-bottom: 120px;
+   margin-left: 50px;
+}
+@keyframes reveal {
+    80%{
+      letter-spacing: 8px;
+    }
+    100% {
+      background-size: 300% 300%;
+    }
+  }
+  @keyframes glow {
+    40% {
+      text-shadow: 0 0 8px #fff;
+    }
+  }
+#btn
+{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(-100px);
+}
+
+.intro .cover  img
+{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+   
+
+    
+
+    
+}
+#heading 
+{
+    font-size: 4rem;
+    z-index: 50;
+    position: relative;
+    font-family: 'Niramit', sans-serif;
+}
+#subtitle
+{
+    font-size: 2rem;
+    z-index: 50;
+    position: relative;
+}
+.intro .cover img:hover {
+  
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+    
+}
+.intro .name
+{
+    width:48%;
+    border-radius: 50%;
+    
+}
+.intro .cake
+{  
+    position: relative;
+    width: 2%;   
+}
+
+
+
+
+.intro .name span 
+{
+    display: inline-block;
+    height: 100vh;
+    
+    
+}
+.intro .name span h1
+{
+    font-size: 4rem;
+    position: relative;
+    top: 50px;
+    font-weight: 600;
+}
+
+section::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to top,#1c0522,#fff);
+    z-index: 1000;
+    visibility: hidden;
+}
+.special
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 100px;
+    justify-content: space-between;
+}
+
+
+.special .container
+{
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    height: 100vh;
+    margin-top:5%; 
+    align-items: baseline;
+}
+.special .container .card
+{
+    width: 28%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    background: white;
+    justify-content: flex-end;
+    transition: 0.1s;
+}
+.special .container .card .img
+{
+    height: 100%;
+    z-index: 4;
+    background: yellow;
+    
+}
+.special .container .card .img img
+{
+   
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.special .container .card:hover{
+  height: 78%;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);  
+}
+.special .container .card .text
+{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 5px;
+    
+    
+}
+.special .container .card .text .row
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.special .container .card .text .price
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 10px 20px;
+  background: white;
+  opacity: 0;
+ visibility: hidden;
+  transition: 0.1s;
+    align-content: center;
+    padding-top:10px; 
+}
+.special .container .card:hover .text .price
+{
+    opacity: 1;
+  visibility: visible;
+}
+.special .container .card .text .row .Veg
+{
+       
+    width: 15px;
+}
+.special .container .card .text .row .top-text
+{
+    font-size:1.4rem;
+    font-weight: 600;
+    color: #202020;
+}
+.special .container .card .text .row .Veg img
+{
+    object-fit: cover;
+    width: 100%;
+}
+.special .container .card .text .bottom-text
+{
+    font-size: 1.1rem;
+  font-weight: 600;
+  color: #e74c3c;
+  line-height: 1.2em;
+
+}
+.special .container .card .text .price button
+{
+    text-decoration: none;
+  background: #e1e5ea;
+  color: black;
+  padding: 5px 8px;
+  border-radius: 3px;
+  display: inline-flex;
+  transition: 0.2;
+}
+.special .container .card .text .price button:active
+{
+    background: #4aa96c;
+}
+

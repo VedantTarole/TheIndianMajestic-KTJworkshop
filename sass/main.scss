@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Titan+One');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+header{
+  background-color: black;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color:transparent;
+    position: fixed;
+    left: 40%;
+    top: 30px;
+    z-index: 100;
+  }
+  
+  .topnav a {
+    float: left;
+    color:royalblue;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.3em;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-size: 17px;
+    border: 1px double white;
+    border-radius: 20px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    /*background-color: #04AA6D;*/
+    color: white;
+    background-color: orange;
+  }
+  img#background{
+      width: 100%;
+      height: 99%;
+  }
+  img#loogo{
+      height: 250px;
+      position: absolute;
+      top: -250px;
+      left: 40px;
+
+  }
+  #BT{
+      height: auto;
+      width:32.5%;
+      z-index: 1;
+      position: absolute;
+      left: 70px;
+      top:17%
+      
+  }
+  #home{
+      animation-name: moveInleft;
+      animation-duration: 1s;
+      animation-delay: 0.5s;
+      backface-visibility: hidden;
+  }
+  #logo{
+      height: 103px;
+      position: fixed;
+      top: 3px;
+      left: 90px;
+      z-index: 100;
+  }
+  #intro{
+      font-size: 2.4em;
+      color: white;font-weight: 400;line-break: loose;
+      font-family:Georgia, 'Times New Roman', Times, serif;
+      position: absolute;left: 42.8%;top:42%;
+      animation-name: moveInRight;
+      animation-duration: 1.5s;
+      backface-visibility: hidden;
+  }
+  .btn{
+    &:link,&:visited{
+        text-decoration: none;
+        padding: 20px 40px;
+        display: inline-block;
+        margin-top: 15px;
+        border-radius: 100px;
+        transition: all 0.4s;
+        position: relative;
+        
+    }
+    
+    &:hover{
+        transform: translateY(-4px);
+        box-shadow: 0 10px 10px slategray;
+  
+    }
+    &:active{
+        transform: translateY(-2px);
+        box-shadow: 0 5px 5px slategray;
+    }
+    &-white{
+        background-color: white;
+        color: black ;
+        &::after{
+            background-color: white;
+        }
+        &:hover::after{
+            transform: scaleX(1.4) scale(1.5);
+            opacity: 0;
+        }
+    }
+    &::after{
+        content:"";
+        display: inline-block;
+        height: 100%;
+        width:100%;
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 0.5s;
+  
+    }
+    
+  }
+
+  #introduction{
+    font-size: 1.2em;
+    color: white;font-weight: 400;line-break: loose;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;left: 42.8%;top:57%;
+    animation-name: moveInRight;
+    animation-duration: 1.5s;
+    backface-visibility: hidden;
+    text-align: center;
+      
+  }
+  
+  @keyframes moveInleft{
+      0%{
+          opacity: 0;z-index: 1;
+          transform: translateX(-100px);
+        
+        }
+      80%{
+          opacity: 0.6;
+          transform: translateX(20px);
+
+      }
+      100%{
+          opacity: 1;
+          transform: translate(0);
+
+      }
+  }
+  @keyframes moveInRight{
+    0%{
+        opacity: 0;z-index: 1;
+        transform: translateX(+100px);
+      
+      }
+    80%{
+        opacity: 0.8;
+        transform: translateX(-20px);
+
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+
+    }
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+
+  .row {margin: 0 -5px;}
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+.row .column .card
+{
+    width: 350px;
+    height: 450px;
+    
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    background: white;
+    transition: 0.1s;
+}
+.row .column .card .img
+{
+    height: 100%;
+    z-index: 4;
+    background:transparent;
+    
+}
+.row .column .card .img img
+{
+   
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.row .column .card:hover{
+    transform: scale(1.02);
+}
+
+.row .column .card .text
+{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 5px;
+    
+    
+}
+.row .column .card .text .rows
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row .column .card .text .price
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 10px 20px;
+  background: white;
+  opacity: 0;
+ visibility: hidden;
+  transition: 0.1s;
+    align-content: center;
+    padding-top:10px; 
+}
+.row .column .card:hover .text .price
+{
+    opacity: 1;
+  visibility: visible;
+}
+.row .column .card .text .rows .Veg
+{
+       
+    width: 15px;
+}
+.row .column .card .text .rows .top-text
+{
+    font-size:1.4rem;
+    font-weight: 600;
+    color: #202020;
+}
+.row .column .card .text .rows .Veg img
+{
+    object-fit: cover;
+    width: 100%;
+}
+.row .column .card .text .bottom-text
+{
+    font-size: 1.1rem;
+  font-weight: 600;
+  color: #e74c3c;
+  line-height: 1.2em;
+
+}
+.row .column .card .text .price button
+{
+    text-decoration: none;
+  background: #e1e5ea;
+  color: black;
+  padding: 5px 8px;
+  border-radius: 3px;
+  display: inline-flex;
+  transition: 0.2;
+}
+.row .column .card .text .price button:active
+{
+    background: #4aa96c;
+}
+footer{
+    position:absolute;
+    
+    left: 10%;
+    margin-top: 10%;
+    color: black;
+    font-size: large;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
